@@ -1,0 +1,9 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000000102e17ca5, pid=2984, tid=40039
+#
+# JRE version: 7.0_13-b20
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (23.7-b01 mixed mode bsd-amd64 compressed oops)
+# Problematic frame:
+# 
