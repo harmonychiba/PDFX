@@ -41,7 +41,6 @@ public class FpPdfPagePanel extends FxPartComponent{
     int page_number;
     
     TextField page_number_field;
-    private String url;
     public FpPdfPagePanel(){
         this.id = "FpPdfPagePanel";
         this.page_number = 1;
@@ -109,8 +108,7 @@ public class FpPdfPagePanel extends FxPartComponent{
         try {
             doc.open();
             PdfDecoder pdf = new PdfDecoder();
-            //pdf.openPdfFile(this.pdf_file.getAbsolutePath());
-            pdf.openPdfFileFromURL(this.url, false);
+            pdf.openPdfFile(this.pdf_file.getAbsolutePath());
             
             pdf_bimage = pdf.getPageAsImage(this.page_number);
             Image pdf_page_image = Page.createImage(pdf_bimage);
@@ -165,7 +163,6 @@ public class FpPdfPagePanel extends FxPartComponent{
         super.createParameter(element);
         if(element.getTagName().equalsIgnoreCase("PdfImageFile")){
             this.pdf_file = new File(element.getChildNodes().item(0).getTextContent());
-            this.url = element.getChildNodes().item(0).getTextContent();
         }
         else if(element.getTagName().equalsIgnoreCase("PageNumber")){
             this.page_number = Integer.parseInt(element.getChildNodes().item(0).getTextContent());

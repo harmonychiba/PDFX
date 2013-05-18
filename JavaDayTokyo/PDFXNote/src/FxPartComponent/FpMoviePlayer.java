@@ -28,7 +28,6 @@ public class FpMoviePlayer extends FxPartComponent{
     private boolean playing;
     Button open_button;
     CheckBox use_as_video_size;
-    private String url;
     
     public FpMoviePlayer(){
         super();
@@ -122,8 +121,7 @@ public class FpMoviePlayer extends FxPartComponent{
     @Override
     public void generateComponentFromXml() {
         super.generateComponentFromXml();
-        //Media media = new Media("file:///"+file.getAbsolutePath());
-        Media media = new Media(url);
+        Media media = new Media("file:///"+file.getAbsolutePath());
         player = new MediaPlayer(media);
         mediaview = new MediaView(player);
             mediaview.setFitWidth(getWidth_scale());
@@ -154,7 +152,6 @@ public class FpMoviePlayer extends FxPartComponent{
         if(element.getTagName().equalsIgnoreCase("File")){
             Node node = element.getChildNodes().item(0);
             this.file = new File(node.getTextContent());
-            this.url = node.getTextContent();
         }
     }
 }

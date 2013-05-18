@@ -11,16 +11,20 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="PDFXNote.jar" size="271429" download="eager" />
+    <jar href="PDFXNote.jar" size="269935" download="eager" />
     <jar href="lib/commons-codec-1.6.jar" size="232771" download="eager" />
     <jar href="lib/commons-httpclient-3.1-rc1.jar" size="307550" download="eager" />
     <jar href="lib/commons-logging-1.1.1.jar" size="60686" download="eager" />
+    <jar href="lib/deploy.jar" size="1857646" download="eager" />
     <jar href="lib/itext-1.3.1.jar" size="1553403" download="eager" />
     <jar href="lib/itextpdf-5.3.1-javadoc.jar" size="3774276" download="eager" />
     <jar href="lib/itextpdf-5.3.1.jar" size="1765191" download="eager" />
+    <jar href="lib/javaws.jar" size="453734" download="eager" />
+    <jar href="lib/jfxrt.jar" size="15210241" download="eager" />
     <jar href="lib/jgroups-3.2.5.Final.jar" size="1982978" download="eager" />
     <jar href="lib/jpedal_lgpl.jar" size="2902698" download="eager" />
     <jar href="lib/pcscreen.jar" size="2681" download="eager" />
+    <jar href="lib/plugin.jar" size="916495" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="PDFXNote" >
     <param name="requiredFXVersion" value="2.2+"/>

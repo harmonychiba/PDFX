@@ -56,7 +56,6 @@ public class FpImage extends FxPartComponent {
     private Button cancelButton;
     private Pane imageViewPane;
     private StackPane imageSetStackPane;
-    private String url;
 
     public FpImage() {
         super();
@@ -207,10 +206,7 @@ public class FpImage extends FxPartComponent {
     @Override
     public void generateComponentFromXml() {
         super.generateComponentFromXml();
-        
-        //this.image = new Image("file:///"+file.getAbsolutePath());
-        
-        this.image = new Image(url);
+        this.image = new Image("file:///"+file.getAbsolutePath());
         this.imageView = new ImageView();
         this.imageView.setImage(image);
         this.imageView.setFitWidth(this.getWidth_scale());
@@ -232,7 +228,6 @@ public class FpImage extends FxPartComponent {
         super.createParameter(element);
         if(element.getTagName().equalsIgnoreCase("File")){
             Node fileNode = element.getChildNodes().item(0);
-            this.url = fileNode.getTextContent();
             this.file = new File(fileNode.getTextContent());
         }
     }
